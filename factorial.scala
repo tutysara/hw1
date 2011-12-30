@@ -24,9 +24,25 @@ if (num < 0) {
 // reduce it using multiplication, or create a recursive function and
 // call it with the supplied value.
 
-
+def fact(n:Int):Int={
+	//recursive implimentation
+	/*if(n==0)
+		1
+	else
+		n*fact(n-1)
+	*/
+	//range implimentation
+	val res=1
+	(1 to num).reduce(_*_)
+	
+	//product implimentation
+	//(1 to num).product
+	
+}
+val factorial=fact(num)
 
 
 
 // Print the result
-
+import System.out._
+println(num+"! = "+factorial)
