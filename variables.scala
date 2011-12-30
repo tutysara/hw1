@@ -18,18 +18,21 @@ val Array(num1, num2) = args map (_.toInt)
 // Start your work here
 
 // Add the numbers and print the result.
-
+import System.out._ //for println function
+println(num1 +" + "+num2+ " = "+(num1+num2))
 
 // Multiply the numbers and print the result.
-
+println(num1 +" * "+num2+" = "+(num1*num2))
 
 // Compare the two numbers and set the "smaller" and "larger"
 // variables appropriately.
-
+val (smaller,larger)=if(num1<=num2) (num1,num2) else (num2,num1)
 
 // Print out which number is smaller and which is larger.
-
+println("Smaller : "+smaller)
+println("Larger :"+larger)
 
 // Calculate the value of adding the two numbers and multiplying the
 // result by the smaller number.
 
+println("("+ num1+" + "+num2+") * "+smaller+" = "+(num1+num2)*smaller)
