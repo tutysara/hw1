@@ -14,7 +14,11 @@ val Array(num1, num2) = args map (_.toInt)
 
 // Check that the first number is smaller than the second. If it
 // isn't, print a warning message and exit.
-
+import System.out._
+if(num1>num2){
+	println("Please make sure that first number is smaller that the second.")
+	System.exit(0)
+}
 
 // Create a range using "to" and the numbers provided as arguments. 
 
@@ -22,4 +26,7 @@ val Array(num1, num2) = args map (_.toInt)
 // Print the numbers in the range with "+" in between each one (hint:
 // use mkString) and the result of adding them all together (hint: use
 // sum)
+val range= num1 to num2
+val sum=range.sum
+println(range.mkString(" + ")+" = "+sum)
 
