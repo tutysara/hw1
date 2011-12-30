@@ -27,11 +27,21 @@ args match {
 // are correct, so you don't need to worry about that.
 
 // Initialize variables num1, op and num2 based on the values in the args array.
+val Array(num1s,op,num2s)=args
+val num1=num1s.toInt
+val num2=num2s.toInt
 
 
 // Obtain a result by using the string name of the operator to choose
 // which arithmetic operation to use.
-
+val res=op match {
+	case "plus" => num1+num2
+	case "minus" => num1-num2
+	case "times" =>num1*num2
+	case "div"=>(num1/num2.toDouble)
+}
+import System.out._
+println(num1 +" "+op+" "+num2+" = "+res)
 
 
 // Print the result.
